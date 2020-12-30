@@ -1,10 +1,12 @@
 # Usage
 
 ```typescript
-let params = parseVKParams('...', env.VK_APP_SECRET_KEY)
+import { parseVKParams } from "https://deno.land/x/parse_vk_params@1.0.0";
+
+const params = parseVKParams('?any=any', env.VK_APP_SECRET_KEY);
 
 if (params.isCorrect) {
-    let userId = params.vk_user_id
+    const userId = params.vk_user_id;
 } else {
     // incorrect
 }
